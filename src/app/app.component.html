@@ -1,0 +1,30 @@
+
+
+  <!-- Resources -->
+  <h2>Resources</h2>
+  <span> &#123;<br></span>
+	       		<span> &nbsp;"test1":"test1_Value",<br></span>
+	       		<span>&nbsp; "test2": 12345,<br></span>
+	       		<span>&nbsp; "secObject":  &#123; "sec1":"sec1_Value", "sec2": 888888< &#125;,<br></span>
+	       		<span> &nbsp;"secArray": [<br></span>
+	       		<span>  &nbsp;&nbsp;   &#123; "sec1":"sec1_ArrayValue", "sec2": 333333&#125;,<br></span>
+	       		<span>  &nbsp;&nbsp;   &#123; "sec1":"sec1_ArrayValue","sec2": 555555 &#125;<br></span>
+	       		<span>&nbsp;  ]<br></span>
+	       		<span>&#125;</span>
+             <br><br><button (click)="ttt()">tttt</button><br><br>
+  <span>@ENTITY_CLASS()<br> </span>
+    <span>export class TestDataBean&#123;    <br> </span>
+        <span>&nbsp;@COLUMN_MAP("test1")<br> </span>
+        <span>&nbsp;beanAttr:string;<br> </span>
+        <span>&nbsp;@COLUMN_MAP("test2")<br> </span>
+        <span>&nbsp;beanAttr2:number;<br> </span>
+        <span>&nbsp;@COLUMN_MAP("secObject")<br> </span>
+        <span>&nbsp;testsecobj:TestDataMapSec;<br> </span>
+        <span>&nbsp;@COLUMN_MAP("secArray","TestDataMapSec")<br> </span>
+        <span>&nbsp;testArray:TestDataMapSec[];<br> </span>
+    <span>&#125;</span>
+  
+
+
+
+<router-outlet></router-outlet>
